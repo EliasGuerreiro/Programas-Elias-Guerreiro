@@ -1,0 +1,49 @@
+/*Programa Libreria Elias Guerreiro*/
+
+#include <iostream>
+using namespace std;
+
+//Inicio del Main
+int main (){
+	
+//Zona de declaracion
+	int isbn, num_pag;
+	char seguir = 's';
+    float precio = 0;
+    
+//comienzo del while
+    while (seguir != 'n') {
+
+        cout << "Ingrese el ISBN de su libro: ";
+        cin >> isbn;
+
+        cout << "Ingrese el número de páginas del libro: ";
+        cin >> num_pag;
+
+        if (num_pag >= 300 & num_pag <= 500) {
+            precio = 1500 + (num_pag * 5) + 150;
+        } else if (num_pag > 500 && num_pag <= 550) {
+            precio = 1500 + (num_pag * 5) + 250;
+        } else if (num_pag > 550) {
+            precio = 1500 + (num_pag * 5) + 500;
+        } else {
+            precio = 1500 + (num_pag * 5);
+        }
+
+        cout << "El ISBN del libro es: " << isbn << " su precio final es: " << precio << "bs." << endl;
+
+        precio = 0;
+
+        cout << "Desea agregar otro libro? (S/N): ";
+        cin >> seguir;
+    } 
+
+    cout << "\n";
+    cout << "Procesamiento completo";
+
+	
+	
+	
+	
+	return 0;
+}//Fin del programa
