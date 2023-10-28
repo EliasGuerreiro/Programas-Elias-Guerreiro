@@ -1,0 +1,41 @@
+/*Programa nota estudiantes Elias Guerreiro */
+
+#include <iostream>
+
+//inicio del main
+int main() {
+	
+//Zona de declaracion de variables
+    int num_estu = 35;
+    int nota;
+    int suma_notas = 0;
+    int estu_perfec = 0;
+    int estu_60 = 0;
+
+//inicio del bucle for
+    for (int i = 1; i <= num_estu; i++) {
+        std::cout << "Ingrese la nota del estudiante " << i << ": ";
+        std::cin >> nota;
+
+        suma_notas += nota;
+
+        if (nota == 100) {
+            estu_perfec ++;
+        }
+
+        if (nota < 60) {
+            estu_60 ++;
+        }
+    }
+
+    double promedio = static_cast<double>(suma_notas) / num_estu;
+
+//Colocar los datos recolectados
+    std::cout << "Promedio de notas de la sección: " << promedio << std::endl;
+    
+    std::cout << "Número de estudiantes con calificación perfecta: " << estu_perfec << std::endl;
+    
+    std::cout << "Número de estudiantes con nota por debajo de 60 puntos: " << estu_60 << std::endl;
+
+    return 0;
+}//Fin del Programa
